@@ -1,0 +1,614 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    height: 100vh;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+}
+section {
+    height: 100%;
+    z-index: 1000;
+
+}
+
+section h1 {
+    padding: 0px;
+    margin: 0px;
+}
+
+#one {
+    background-image: url(Images_Home/Halo_Infinite_WallPaper.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative; 
+}
+header{
+    margin: 0px;
+    font-family: Orbitron;
+    color: antiquewhite;
+    display: flex;
+    justify-content: center;
+    font-size: 1.5vw;
+}
+
+.navbar{
+    z-index: 10;
+}
+.navbar ul {
+    list-style: none;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+    gap: 30px;
+}
+
+.navbar ul li  {
+    display: inline-block;
+    position: relative;
+}
+
+.navbar ul li a {
+    display: flex;
+    padding: 20px 25px;
+    color: whitesmoke;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.5vw;
+    font-family: Roboto;
+    transition: background-color 0.3s, border 0.3s;
+    border: 2px solid transparent; 
+}
+
+.navbar ul li ul.dropdown {
+    position: absolute;
+    z-index: 999;
+    display: none;
+    padding: 0;
+}
+
+.navbar .bar:hover {
+    border: 2px solid white;
+    background-color: teal;
+}
+
+.navbar ul li ul.dropdown li {
+    padding: 10px;
+}
+
+.navbar ul li:hover ul.dropdown { 
+    display: block;
+}
+
+.navbar ul li ul.dropdown li a {
+    padding: 10px 15px;
+    display: block;
+    color: whitesmoke;
+    text-decoration: none;
+    z-index: 100;
+}
+
+.navbar ul li ul.dropdown li a:hover {
+    background-color: teal;
+    color: whitesmoke;
+    border: 2px solid white;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100vh;
+    background-color: rgb(47, 104, 104);
+    z-index: 20;
+    transition: all 0.7s ease;
+}
+.sidebar ul{
+    text-decoration: none;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.sidebar h1 {
+    font-size: 28px;
+    color: white;
+    text-align: center;
+    line-height: 4rem; 
+    background: darkcyan;
+    user-select: none;
+    margin: 0;  
+    padding: 0;
+    box-sizing: border-box; 
+}
+.sidebar ul li a {
+    display: block;
+    width: 100%;
+    height: 12.45vh;
+    line-height: 3rem;
+    font-size: 20px;
+    color: white;
+    padding-left: 45px;
+    box-sizing: border-box;
+    margin: 0; 
+    text-decoration: none;
+    list-style: none;
+}
+
+.sidebar ul li:hover a{
+    padding-left: 50px;
+    transition: 1s;
+}
+.sidebar ul li:hover {
+background-color: darkcyan;
+}
+#checkbox{
+    display: none;
+}
+
+label #menu #close-btn{
+    position: relative;
+    cursor: pointer;
+    height: 100px;
+    width: 500px;
+}
+
+label #menu {
+    position: absolute;
+    left: 20px; 
+    top: 25px;
+    font-size: 35px;
+    color: white;
+    padding: 6px 12px;
+    cursor: pointer;
+    opacity: 1; 
+    z-index: 1000;
+}
+
+
+label #close-btn {
+    position: absolute;
+    left: 14vw; 
+    top: 1.2vh;
+    font-size: 35px;
+    color: white;
+    padding: 6px 12px;
+    opacity: 0; 
+    cursor: pointer;
+    z-index: 1000;
+    pointer-events: none; 
+}
+
+
+#checkbox:checked + label #menu {
+    display: none;
+}
+
+#checkbox:checked + label #close-btn {
+    display: block;
+    transition: 4.6s;
+}
+
+
+#checkbox:checked ~ .sidebar {
+    left: 0px;
+}
+
+
+#checkbox:checked + label #menu {
+    opacity: 0;
+    pointer-events: none; 
+}
+
+#checkbox:checked + label #close-btn {
+    opacity: 1;
+    pointer-events: all; 
+}
+
+#sub-heading{
+    font-size: 4vw; 
+    color: white;
+    opacity: 0;
+    text-shadow: 0 0 10px #2cd2fc, 
+                 0 0 20px #2cd2fc, 
+                 0 0 30px #00ffff, 
+                 0 0 40px #00ffff, 
+                 0 0 50px #00ffff, 
+                 0 0 60px #00ffff, 
+                 0 0 70px #00ffff;
+    animation: fadeIn 2s ease-in-out 1s forwards, 
+    glow 2s 10s alternate; 
+    top: 40vh;
+    font-family: Orbitron;
+}
+
+#one-text {
+    font-size: 18px;
+    color: whitesmoke;
+    opacity: 0; 
+    animation: fadeIn 2s ease-in-out 1s forwards; 
+    width: 90%;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #00ffff, 0 0 40px #00ffff, 0 0 50px #00ffff, 0 0 60px #00ffff, 0 0 70px #00ffff;
+    }
+    100% {
+        text-shadow: 0 0 20px #fff, 0 0 30px #00ffff, 0 0 40px #00ffff, 0 0 50px #00ffff, 0 0 60px #00ffff, 0 0 70px #00ffff, 0 0 80px #00ffff;
+    }
+}
+
+#two{
+background-color: blueviolet;
+display: flex;
+height: 100vh;
+}
+#image-container {
+    width: 50%;
+    position: relative;
+    overflow: hidden;
+}
+
+#image-default,
+#image-hover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#image-hover {
+    opacity: 0; 
+}
+
+#image-container:hover #image-hover {
+    opacity: 1; 
+}
+
+#image-container:hover #image-default {
+    opacity: 0; 
+}
+
+#two-text {
+    width: 50%;
+    padding: 20px;
+    background-color: #34495e;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+#two-text h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+#two-text p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: white;
+    word-wrap: break-word;
+    margin: 0px; 
+}
+
+#three {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; 
+    margin: 0;
+    position: relative;
+    overflow: hidden; 
+}
+
+.slider {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.slider-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0; 
+    transition: opacity 0.5s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider-image.active {
+    opacity: 1; 
+}
+
+.slider-text {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 10px 20px;
+    font-size: 2rem;
+    text-align: center;
+    border-radius: 8px;
+}
+
+#slider-text1 {
+    color:rgb(86, 185, 86);  
+}
+#slider-text2 {
+    color:rgb(179, 59, 179);  
+}
+#slider-text3 {
+    color:#c08d1e;  
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    cursor: pointer;
+    user-select: none;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+
+#four {
+    display: flex;
+    height: 100vh;
+}
+
+.three-columns {
+    display: flex;
+    width: 100%;
+}
+
+.column {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: black;
+}
+
+.column-one {
+    background-color: rgb(86, 185, 86); 
+}
+
+.column-two {
+    background-color: rgb(179, 59, 179); 
+}
+
+.column-three {
+    background-color: #c08d1e; 
+}
+
+h2 {
+    margin-bottom: 15px;
+    font-size: 2rem;
+}
+
+p {
+    font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#five {
+    background-color: #1c1c1c; 
+    color: #fff;
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+#five header{
+    font-family: Roboto, sans-serif;
+    font-size: 24px;
+    color: white;
+
+}
+
+.quotes-container {
+    width: 100%;
+    max-width: 1200px;
+    text-align: center;
+}
+
+.quote {
+    position: relative;
+    margin-bottom: 40px;
+    font-family: Roboto, sans-serif;
+}
+
+.quote-icon {
+    font-size: 3rem;
+    position: absolute;
+    left: 10px;
+    top: 0;
+}
+
+.quote-icon-right {
+    font-size: 3rem;
+    position: absolute;
+    right: 10px;
+    bottom: -10px;
+}
+#quote1L, #quote1R{
+    color: darkgreen;
+}
+#quote2L, #quote2R{
+    color: darkmagenta;
+}
+#quote3L, #quote3R{
+    color: #ffae00;
+}
+.quote-text {
+    font-size: 28px; 
+    line-height: 1.5;
+    margin: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+   
+#seven {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #262b31;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+
+#seven h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+form#halo-quiz {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 60%;
+    background-color: #586474;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+form#halo-quiz .question {
+    margin-bottom: 15px;
+}
+
+form#halo-quiz .question p {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+}
+
+form#halo-quiz input[type="radio"] {
+    margin-right: 10px;
+}
+
+form#halo-quiz label {
+    font-size: 1rem;
+}
+
+form#halo-quiz input[type="submit"] {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+
+form#halo-quiz input[type="submit"]:hover {
+    background-color: #2980b9;
+}
+
+
+    
+#six {
+    padding: 40px;
+    background-color: #262b31;;
+    text-align: center;
+}
+
+#six h2 {
+    margin-bottom: 20px;
+}
+
+textarea {
+    width: 60%;
+    height: 150px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+.send-button {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.send-button:hover {
+    background-color: #2980b9;
+}
+#bio {
+    color: #262b31;
+}
+
+footer {
+    background-color: #34495e;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer a {
+    color: #ecf0f1;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}

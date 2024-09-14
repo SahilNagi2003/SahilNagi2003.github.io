@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="Images_Home/Favicon.jpg" type="image/.jpg">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <section id="one">
+            <header>
+                <h1>AllThingsHalo</h1>
+            </header>
+            <main>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html" class="bar">Home</a></li>
+                    <li>
+                        <a href="" class="bar">Weapons</a>
+                        <ul class="dropdown">
+                            <li><a href="">UNSC</a></li>
+                            <li><a href="">Covenant</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="History.html" class="bar">History</a></li>
+                    <li>
+                        <a href="" class="bar">Characters</a>
+                        <ul class="dropdown">
+                            <li><a href="">UNSC</a></li>
+                            <li><a href="">Covenant</a></li>
+                            <li><a href="">Flood</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="" class="bar">Games</a>
+                        <ul class="dropdown">
+                            <li><a href="">Halo: CE</a></li>
+                            <li><a href="">Halo 2</a></li>
+                            <li><a href="">Halo 3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="" class="bar">Buy</a></li>
+                </ul>
+            </nav>
+
+            <br>
+            <br>
+
+            <div id="one-info">
+                <br><br><br><br><br><br><br><br><br><br><br>
+                <h1 id="sub-heading">Welcome to AllThingsHalo</h1>
+                <p id="one-text">Welcome to AllThingsHalo, your ultimate hub for everything related to the legendary Halo video game franchise!</p>
+            </div>
+        </main>
+
+            <input type="checkbox" id="checkbox">
+            <label for="checkbox">
+                <i class="fa-solid fa-bars" id="menu"></i>
+                <i class="fa-solid fa-xmark" id="close-btn"></i>
+            </label>
+            <div class="sidebar" id="side">
+                <h1>Sections</h1>
+                &nbsp;
+                <ul>
+                    <li><a href="#one" onclick="closeSidebar()">Home</a></li>
+                    <li><a href="#two" onclick="closeSidebar()">About Me</a></li>
+                    <li><a href="#three" onclick="closeSidebar()">Factions</a></li>
+                    <li><a href="#four" onclick="closeSidebar()">Factions' Info</a></li>
+                    <li><a href="#five" onclick="closeSidebar()">Quotes</a></li>
+                    <li><a href="#seven" onclick="closeSidebar()">Quiz</a></li>
+                    <li><a href="#six" onclick="closeSidebar()">Feedback</a></li>
+                </ul>
+            </div>
+
+        </section>
+
+        <section id="two">
+            <div id="image-container">
+                <img src="" alt="">
+                <img src="Images_Home/MasterChief_Green.jpg" id="image-default" alt="Halo_Art">
+                <img src="Images_Home/Halo_HomePage.jpg" id="image-hover" alt="Halo_Art">
+            </div>
+            <div id="two-text">
+                <header>
+                    <h2>About Me</h2>
+                </header>
+                <article>
+                    <p>Welcome to AllThingsHalo, I made this website to be your go-to source for everything Halo so people can explore the universe, the lore, the weapons, and the iconic characters that define this legendary franchise. I made this page because I have played the series for a long time and most of the other pages covering Halo info don't have a lot of design. The task was to make a webpage so I only made one of the page, this Home Page. Thank you for the lessons in Couch2Coder. <br> <br> Now, dive into the world of Halo, starting with the various factions of Halo.</p>
+                </article>
+            </div>
+        </section>
+        <section id="three">
+            <div class="slider">
+
+                <div class="slider-image active">
+                    <img src="Images_Home/UNSC_Slider.jpg" alt="UNSC" />
+                    <div class="slider-text" id="slider-text1">The UNSC</div>
+                </div>
+                
+                <div class="slider-image">
+                    <img src="Images_Home/Covenant_Slider.jpg" alt="Covenant" />
+                    <div class="slider-text" id="slider-text2">The Covenant</div>
+                </div>
+        
+                <div class="slider-image">
+                    <img src="Images_Home/Flood_HomePage.jpg" alt="Flood" />
+                    <div class="slider-text" id="slider-text3">the Flood!</div>
+                </div>
+        
+                <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+                <a class="next" onclick="changeSlide(1)">&#10095;</a>
+            </div>
+        </section>
+    
+        <section id="four">
+            <div class="three-columns">
+                <div class="column column-one">
+                    <h2>UNSC Purpose</h2>
+                    <article>
+                        <p>The UNSC (United Nations Space Command) serves as humanity's military, scientific, and exploratory body in the Halo universe. Their goals include:</p>
+                    <ul>
+                        <li>Defending Earth and human colonies from external threats.</li>
+                        <li>Exploring space and advancing humanity’s technological reach.</li>
+                        <li>Fighting against the Covenant and other hostile factions.</li>
+                        <li>Upholding peace and order within human territories.</li>
+                        <li>Reclaiming and securing planets overrun by the Flood.</li>
+                    </ul>
+                    </article>
+                </div>
+                <div class="column column-two">
+                    <h2>Covenant Purpose</h2>
+                    <article>
+                        <p>The Covenant is an alliance of alien species united by religious beliefs and military conquest. Their goals include:</p>
+                        <ul>
+                            <li>Seeking and activating the Halo rings to achieve the "Great Journey."</li>
+                            <li>Subjugating or eradicating any species that oppose them, including humanity.</li>
+                            <li>Following the Prophets' teachings based on Forerunner technology and relics.</li>
+                            <li>Destroying the Flood to prevent its spread across the galaxy.</li>
+                            <li>Maintaining the alliance between various Covenant species under theocratic rule.</li>
+                        </ul> 
+                    </article>
+                </div>
+                <div class="column column-three">
+                    <h2>Flood Purpose</h2>
+                    <article>
+                        <p>The Flood is a parasitic species that threatens all life in the galaxy. Their goals include:</p>
+                        <ul>
+                            <li>Infecting and assimilating all life forms, particularly sentient species.</li>
+                            <li>Overwhelming military forces, including the UNSC and Covenant.</li>
+                            <li>Spreading across the galaxy to consume all biomass.</li>
+                            <li>Escaping containment and reaching new worlds for further infection.</li>
+                            <li>Becoming a Gravemind, the Flood's collective intelligence and leader.</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+        
+        <section id="five">
+            <header>
+                <h2>Quotes</h2>
+            </header>
+            <div class="quotes-container">
+                <div class="quote">
+                    <i class="fa fa-quote-left quote-icon" id="quote1L"></i>
+                    <blockquote>
+                        <p class="quote-text">"Halo is more than just a game; it's a cultural phenomenon that revolutionized first-person shooters and redefined the multiplayer experience."</p><cite>IGN</cite>
+                    </blockquote>
+                    <i class="fa fa-quote-right quote-icon-right"id="quote1R"></i>
+                </div>
+        
+                <div class="quote">
+                    <i class="fa fa-quote-left quote-icon" id="quote2L"></i>
+                    <blockquote>
+                        <p class="quote-text">"The Halo series not only changed the landscape of console shooters but also created a loyal fanbase that continues to thrive two decades later."</p><cite>Polygon</cite>
+                    </blockquote>
+                    <i class="fa fa-quote-right quote-icon-right" id="quote2R"></i>
+                </div>
+        
+                <div class="quote">
+                    <i class="fa fa-quote-left quote-icon" id="quote3L"></i>
+                    <blockquote>
+                        <p class="quote-text">"Halo's lore, characters, and epic battles have become a staple in gaming, inspiring generations of players and developers alike."</p><cite>GameSpot</cite>
+                    </blockquote>
+                    <i class="fa fa-quote-right quote-icon-right"id="quote3R"></i>
+                </div>
+            </div>
+        </section>
+
+        <section id="seven">
+            <h2>Halo Quiz</h2>
+            <form id="halo-quiz">
+                <div class="question">
+                    <p>1. Who is the main protagonist of the Halo series?</p>
+                    <input type="radio" name="main_character" id="masterchief">
+                    <label for="masterchief">Master Chief</label>
+                    <input type="radio" name="main_character" id="arbiter">
+                    <label for="arbiter">The Arbiter</label>
+                    <input type="radio" name="main_character" id="cortana">
+                    <label for="cortana">Cortana</label>
+                </div>
+        
+                <div class="question">
+                    <p>2. What is the name of the AI companion in Halo?</p>
+                    <input type="radio" name="ai_companion" id="cortana">
+                    <label for="cortana">Cortana</label>
+                    <input type="radio" name="ai_companion" id="serina">
+                    <label for="serina">Serina</label>
+                    <input type="radio" name="ai_companion" id="roland">
+                    <label for="roland">Roland</label>
+                </div>
+        
+                <div class="question">
+                    <p>3. What is the Covenant?</p>
+                    <input type="radio" name="covenant" id="alien_alliance">
+                    <label for="alien_alliance">An alien alliance</label>
+                    <input type="radio" name="covenant" id="human_faction">
+                    <label for="human_faction">A human faction</label>
+                    <input type="radio" name="covenant" id="mercenaries">
+                    <label for="mercenaries">A group of mercenaries</label>
+                </div>
+        
+                <br>
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+        
+
+        <section id="six">
+            <h2>Leave Feedback</h2>
+            <form action="#" method="POST">
+                <label for="bio" id="bio">Biography:</label>
+                <textarea name="bio" id="bio" cols="30" rows="10" placeholder="Write your thoughts here..."></textarea>
+                <br>
+                <button type="submit" class="send-button">Send</button>
+            </form>
+        </section>
+        <footer>
+            <p>&copy; 2024 AllThingsHalo. copyright.</p>
+            <p>Contact us at <a href="mailto:support@allthingshalo.com">Nagi_Sahil@outlook.com</a></p>
+        </footer>
+    </div>
+</body>
+</html>
